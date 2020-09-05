@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: opacity .2s;
+}
+
+a:hover {
+    opacity: .6;
+}
+
+/* Page Section*/
+
+section {
+    height: 100vh;
+}
+
+/*Home section */
+#home {
+    background-image: url('img/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.intro{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 15px;
+}
+
+.intro h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+.intro h2 {
+    color: #eee;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.intro .btn-get-started {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 30px 9px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  .intro-button{
+    padding:  30px;
+  }
+  
+/* End Home Section */
+
+
+/* About section */
+
+
+/* end about section */
+/* Navbar */
+.fix-nav {
+    display: flex;
+    padding: 25px;
+    top: 0;
+    background: transparent;
+
+    user-select: none;
+
+    position: fixed;
+    left: 0;
+    top:  0;
+    width: 100%;
+    z-index: 100;
+
+    transition: background .4s, padding .4s;
+}
+
+/* Navbar CSS */
+
+.fix-nav .item-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+    justify-content: space-around;
+}
+
+/* Header Title*/
+
+.heading{
+    text-align: center;
+}
+
+.heading .title{
+    font-weight: 500;
+    font-size: 25px;
+    color: #FFF;
+}
+
+.fix-nav .item-list .item:not(:first-child) {
+    margin-left: 32px;
+}
+
+/* Item on navbar*/
+.fix-nav .item-list .item .link{
+    text-decoration: none;
+    color:#FFF;
+    transition:opacity 200ms ease-in-out;
+    overflow: hidden;
+}
+
+/* Item Navbar effects */
+.fix-nav .item-list .item .link::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    margin-top: 3px;
+    border-radius: 3px;
+    background-color: #fcb934;
+
+    transition: width .2s ease-in-out;
+}
+
+.fix-nav .item-list .item .link.current::after{
+    width: 100%;
+}
+
+.fix-nav .item-list .item .link:hover::after{
+    width: 100%;
+}
+
+/* transparency removed*/
+nav._fixed {
+    background: #121212;
+}
+
+/* End Navbar */
+
+/* scroll To Top Button */
+#scroll-to-top{
+position: fixed;
+bottom: 48px;
+right: 48px;
+
+padding: 24px;
+border-radius: 8px;
+box-shadow: 0 4px 44px rgba(173, 181. 206, .75);
+background: #fff;
+
+transition-property: background, color, bottom, opacity, visibility;
+transition-duration: .25s;
+}
+
+#scroll-to-top[data-show = "false"]{
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#scroll-to-top svg{
+    color: #121212;
+    height: 24px;
+    width: 24px;
+}
+
+#scroll-to-top:hover{
+    cursor: pointer;
+    background: #121212;
+}
+
+#scroll-to-top:hover svg{
+    color: #fff;
+}
+/*END scroll to Top*/
